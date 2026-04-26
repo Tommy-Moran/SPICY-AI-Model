@@ -1,0 +1,52 @@
+=== SPICY-AI extended statistics (cases 1-50, n=50/group) ===
+
+Total plans: 150 (50 per group)
+
+Summary statistics:
+domain     group  n  mean       sd  median   q1  q3
+  diag Physician 50  3.32 0.712569     3.0 3.00 4.0
+  diag  SPICY-AI 50  4.22 0.615779     4.0 4.00 5.0
+  diag    GPT-4o 50  3.80 0.699854     4.0 3.00 4.0
+  mgmt Physician 50  2.98 0.588669     3.0 3.00 3.0
+  mgmt  SPICY-AI 50  4.20 0.670059     4.0 4.00 5.0
+  mgmt    GPT-4o 50  3.78 0.648074     4.0 3.25 4.0
+  comp Physician 50  2.50 0.863075     2.0 2.00 3.0
+  comp  SPICY-AI 50  4.44 0.540597     4.0 4.00 5.0
+  comp    GPT-4o 50  3.88 0.746147     4.0 3.25 4.0
+  clar Physician 50  3.06 0.739829     3.0 3.00 3.0
+  clar  SPICY-AI 50  4.38 0.567486     4.0 4.00 5.0
+  clar    GPT-4o 50  4.04 0.604743     4.0 4.00 4.0
+
+Mann-Whitney U pairwise (two-sided), Holm-Bonferroni adjusted across 12 tests:
+domain    groupA   groupB  meanA  meanB      U            p       p_holm
+  diag Physician SPICY-AI   3.32   4.22  471.5 9.703787e-09 6.792651e-08
+  diag Physician   GPT-4o   3.32   3.80  783.0 4.679894e-04 1.871958e-03
+  diag  SPICY-AI   GPT-4o   4.22   3.80 1633.0 2.814053e-03 7.941932e-03
+  mgmt Physician SPICY-AI   2.98   4.20  275.5 1.136504e-12 1.136504e-11
+  mgmt Physician   GPT-4o   2.98   3.78  492.5 1.358744e-08 8.152464e-08
+  mgmt  SPICY-AI   GPT-4o   4.20   3.78 1635.5 2.647311e-03 7.941932e-03
+  comp Physician SPICY-AI   2.50   4.44  116.5 7.258566e-16 8.710279e-15
+  comp Physician   GPT-4o   2.50   3.88  324.5 3.419246e-11 3.077322e-10
+  comp  SPICY-AI   GPT-4o   4.44   3.88 1756.0 1.059492e-04 5.297459e-04
+  clar Physician SPICY-AI   3.06   4.38  243.5 3.625318e-13 3.987850e-12
+  clar Physician   GPT-4o   3.06   4.04  407.0 5.739627e-10 4.591702e-09
+  clar  SPICY-AI   GPT-4o   4.38   4.04 1601.0 5.699755e-03 7.941932e-03
+
+Error rates (Fisher exact, pairwise):
+error    groupA  rateA   groupB  rateB  p_fisher
+minor Physician   0.18 SPICY-AI   0.16  1.000000
+minor Physician   0.18   GPT-4o   0.14  0.785833
+minor  SPICY-AI   0.16   GPT-4o   0.14  1.000000
+major Physician   0.02 SPICY-AI   0.04  1.000000
+major Physician   0.02   GPT-4o   0.04  1.000000
+major  SPICY-AI   0.04   GPT-4o   0.04  1.000000
+
+Error rates by group:
+          minor       major      
+            sum  mean   sum  mean
+group                            
+GPT-4o        7  0.14     2  0.04
+Physician     9  0.18     1  0.02
+SPICY-AI      8  0.16     2  0.04
+
+Note: study is not powered to detect differences in major-error rates (observed counts 1-2 per arm); the null Fisher results should be interpreted as a feasibility/safety signal, not as evidence of equivalence.

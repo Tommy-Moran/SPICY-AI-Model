@@ -1,0 +1,7 @@
+error,groupA,rateA,groupB,rateB,p_fisher
+minor,Physician,0.18,SPICY-AI,0.16,1.0
+minor,Physician,0.18,GPT-4o,0.14,0.7858331846515465
+minor,SPICY-AI,0.16,GPT-4o,0.14,1.0
+major,Physician,0.02,SPICY-AI,0.04,1.0
+major,Physician,0.02,GPT-4o,0.04,1.0
+major,SPICY-AI,0.04,GPT-4o,0.04,1.0

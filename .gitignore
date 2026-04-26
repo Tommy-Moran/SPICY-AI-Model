@@ -1,0 +1,38 @@
+# Patient data — never commit
+*.docx.bak
+patient_data/
+raw_clinical_notes/
+
+# Keep v3 data only; exclude old v2 artefacts
+scores_long_v2.csv
+summary_v2.csv
+mannwhitney_v2.csv
+error_rates_v2.csv
+error_summary_v2.csv
+stats_output_v2.txt
+ANALYSIS_LOG.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# SPICY-AI vector store (rebuilt from KB files)
+SPICY_AI/vectorstore/
+
+# Knowledge-base source documents — obtain via download_guidelines.sh + DUA.
+# README.md and download_guidelines.sh ARE tracked; the actual files are not.
+SPICY_AI/knowledge_base/*.pdf
+SPICY_AI/knowledge_base/*.docx
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+
+# Claude Code
+.claude/
