@@ -1,0 +1,18 @@
+# SPICY-AI dependencies — pinned to the versions used in the published study.
+# Install with: pip install -r requirements_spicy.txt
+#
+# Note: the LLM itself is served via Ollama (not pip-installed).
+# Pull the exact tag with:
+#   ollama pull deepseek-r1:14b
+# and verify the model digest before running (see SPICY_AI/spicy_ai.py).
+
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.40
+faiss-cpu==1.8.0.post1
+sentence-transformers==2.7.0
+ollama==0.2.1
+pypdf==4.3.1
+docx2txt==0.8
+torch==2.3.1
+transformers==4.44.2
